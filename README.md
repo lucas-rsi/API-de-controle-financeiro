@@ -69,24 +69,23 @@ Exemplo de resposta do resumo em `GET /api/transacoes/resumo`:
 mvn test
 ```
 
-O projeto inclui um teste unitário para validar o cálculo do resumo financeiro.
+O projeto feito inclui um teste unitário para validar o cálculo do resumo financeiro.
 
 ## Decisões técnicas
 
 - `BigDecimal` é utilizado para valores monetários, evitando os problemas de precisão típicos de `float` e `double`.
 - A aplicação separa controller, service, repository, model e DTO para manter responsabilidades distintas.
-- O DTO de entrada usa Bean Validation para rejeitar campos vazios e valores menores que R$ 0,01.
 - O H2 em memória reduz a configuração necessária para executar o projeto localmente. Os dados são perdidos quando a aplicação é encerrada.
 
 ## Próximas melhorias
 
-- Persistência com PostgreSQL ou MySQL.
+- Implementação de PostgreSQL ou MySQL.
 - Paginação e ordenação.
-- Filtros por intervalo de datas.
+- Filtros como por exemplo, intervalo de datas
 - Tratamento padronizado de erros de validação.
 - Autenticação e autorização.
 - Testes de integração dos endpoints.
 
 ## Escopo atual
 
-Projeto de portfólio educacional. Não inclui autenticação nem deve ser usado para armazenar dados financeiros reais.
+Apenas um projeto de portfólio educacional
